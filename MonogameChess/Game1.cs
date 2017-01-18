@@ -114,9 +114,12 @@ namespace MonogameChess
 
 			var gameBoard = entityBoard.addComponent<gameBoard>(new gameBoard());
 
-			// kings
+			// king team 1
 			entity_1King.addComponent<Sprite>(new Sprite(_texKingBlack).setOrigin(new Vector2(0, 0)));
-			entity_1King.addComponent<MouseClickSprites>(new MouseClickSprites());
+			entity_1King.addComponent<MouseClickEvent>(new MouseClickEvent());
+            entity_1King.addComponent<chessPiece>(new chessPiece(pieceTypes.King));
+
+            // king team 2
 			entity_2King.addComponent<Sprite>(new Sprite(_texKingRed).setOrigin(new Vector2(0, 0)));
 
 			// queens

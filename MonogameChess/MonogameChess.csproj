@@ -38,11 +38,12 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="chessPiece.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="gameBoard.cs" />
-    <Compile Include="MouseClickSprites.cs" />
+    <Compile Include="MouseClickEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="OpenTK">

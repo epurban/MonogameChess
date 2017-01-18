@@ -7,9 +7,9 @@ using Nez.Sprites;
 
 namespace MonogameChess
 {
-	public class MouseClickSprites : Component, IUpdatable
+	public class MouseClickEvent : Component, IUpdatable
 	{
-		public MouseClickSprites()
+		public MouseClickEvent()
 		{
 			
 		}
@@ -30,8 +30,17 @@ namespace MonogameChess
 				// is the left mouse button position on top of this sprite?
 				if (area.contains(lmbPos))
 				{
-					bool temp;
-					temp = true;
+                    var chessPiece = entity.getComponent<chessPiece>();
+                    
+                    if (chessPiece.isSelected() == true)
+                    {
+                        chessPiece.setSelected(false);
+                    }
+                    else
+                    {
+                        chessPiece.setSelected(true);
+                    }
+
 				}
 
 			}
