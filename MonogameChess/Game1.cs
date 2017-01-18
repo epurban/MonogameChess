@@ -70,8 +70,7 @@ namespace MonogameChess
             var entity_1Queen = gameScene.createEntity("1queen");
             var entity_1King = gameScene.createEntity("1king");
             var entity_1Bishop1 = gameScene.createEntity("1bishop1");
-            var entity_1Bishop2 = gameScene.createEntity("1bishop2");
-            var entityList_1Pawns = new List<Entity>();
+			var entity_1Bishop2 = gameScene.createEntity("1bishop2");
 
 			// PAWNS 1
 			var entity_1Pawn1 = gameScene.createEntity("1pawn1");
@@ -91,8 +90,7 @@ namespace MonogameChess
             var entity_2Queen = gameScene.createEntity("2queen");
             var entity_2King = gameScene.createEntity("2king");
             var entity_2Bishop1 = gameScene.createEntity("2bishop1");
-            var entity_2Bishop2 = gameScene.createEntity("2bishop2");
-            var entityList_2Pawns = new List<Entity>();
+			var entity_2Bishop2 = gameScene.createEntity("2bishop2");
 
 			// PAWNS 2
             var entity_2Pawn1 = gameScene.createEntity("2pawn1");
@@ -118,6 +116,7 @@ namespace MonogameChess
 
 			// kings
 			entity_1King.addComponent<Sprite>(new Sprite(_texKingBlack).setOrigin(new Vector2(0, 0)));
+			entity_1King.addComponent<MouseClickSprites>(new MouseClickSprites());
 			entity_2King.addComponent<Sprite>(new Sprite(_texKingRed).setOrigin(new Vector2(0, 0)));
 
 			// queens
